@@ -59,7 +59,7 @@
    
    ```bash
    docker pull tensorflow/tensorflow:2.3.0-custom-op-gpu-ubuntu16
-   ~~docker run --runtime=nvidia --privileged  -it -v ${PATH_TO_FOLDER_WITH_TF3D}:/working_dir -w /working_dir  tensorflow/tensorflow:2.3.0-custom-op-gpu-ubuntu16~~
+   # docker run --runtime=nvidia --privileged  -it -v ${PATH_TO_FOLDER_WITH_TF3D}:/working_dir -w /working_dir  tensorflow/tensorflow:2.3.0-custom-op-gpu-ubuntu16
    docker run --runtime=nvidia --privileged  -it -v $(pwd):/working_dir -v /usr/local/share/ca-certificates:/usr/local/share/ca-certificates -w /working_dir     tensorflow/tensorflow:2.4.0-custom-op-gpu-ubuntu16
    ```
 
