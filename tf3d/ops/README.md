@@ -59,15 +59,15 @@
    
    ```bash
    docker pull tensorflow/tensorflow:2.3.0-custom-op-gpu-ubuntu16
-   docker run --runtime=nvidia --privileged  -it -v ${PATH_TO_FOLDER_WITH_TF3D}:/working_dir -w /working_dir  tensorflow/tensorflow:2.3.0-custom-op-gpu-ubuntu16
-   ```
-   ```bash
+   ~~docker run --runtime=nvidia --privileged  -it -v ${PATH_TO_FOLDER_WITH_TF3D}:/working_dir -w /working_dir  tensorflow/tensorflow:2.3.0-custom-op-gpu-ubuntu16~~
    docker run --runtime=nvidia --privileged  -it -v $(pwd):/working_dir -v /usr/local/share/ca-certificates:/usr/local/share/ca-certificates -w /working_dir     tensorflow/tensorflow:2.4.0-custom-op-gpu-ubuntu16
    ```
 
 1. *Within the docker image*, enter `tf3d/ops` folder and run the following to test the building:
 
    ```bash
+   # Update CA certificates
+   sudo update-ca-certificates
    # Make sure you are using tensorflow version to 2.3.0
    pip3 uninstall tensorflow
    pip3 install tensorflow==2.3.0
